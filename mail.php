@@ -6,6 +6,8 @@
 	$recipient = "info@lumatas.com";
 	$subject = "Contact Form";
 	$mailheader = "From: $email \r\n";
-	mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
-	echo "Thank You!" . " -" . "<a href='form.html' style='text-decoration:none;color:#ff0099;'> Return Home</a>";
+	if(mail($recipient, $subject, $formcontent, $mailheader)) echo "Thank you"(['success'=>true]);
+	else echo Lumatas_encode(['success'=>false]);
+	
+	<!--echo "Thank You!" . " -" . "<a href='form.html' style='text-decoration:none;color:#ff0099;'> Return Home</a>";
 ?>
