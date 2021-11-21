@@ -1,8 +1,7 @@
 
 $(document).ready(function() {
 //test
-	//$("#submit").click(function() {
-	$("#submit").on('button'() {
+	$("#submit").click(function() {
 	var name = $("#name").val();
 	var email = $("#email").val();
 	var message = $("#message").val();
