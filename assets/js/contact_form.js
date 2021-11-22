@@ -12,6 +12,7 @@ $(document).ready(function() {
 	if (name == '' || email == '') {
 	alert("Please Fill Required Fields");
 	} else {
+	alert("Your information have sent!");
 	}
 	// Returns successful data submission message when the entered information is stored in database.
 	$.ajax({
