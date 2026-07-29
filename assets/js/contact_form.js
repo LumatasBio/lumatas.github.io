@@ -1,29 +1,23 @@
-
 $(document).ready(function() {
-//test
-	$("#submit").click(function() {
-	var name = $("#name").val();
-	var email = $("#email").val();
-	var message = $("#message").val();
-	$("#returnmessage").empty(); // To empty previous error/success message.
-	// Checking for blank fields.
-	var varData = 'name=' + name + '&email=' + email + '&message=' + message;
-	console.log(varData);
-	if (name == '' || email == '') {
-	alert("Please Fill Required Fields");
-	} else {
-	alert("Your information have sent!");
-	}
-	// Returns successful data submission message when the entered information is stored in database.
-	$.ajax({
-		type: "POST",
-		url: 'mail.php',
-		data: varData,
-		success: function() {
-			alert("Success!")
-		}
-	})
-	
-	
-	});
+    $('#form').on('submit', function(e) {
+        e.preventDefault();
+
+        $.ajax({
+            type: 'POST',
+            url: $(this).attr('action'),
+            data: $(this).serialize(),
+            dataType: 'json',
+            success: function(response) {
+                if (response.status === 'success') {
+                    $('#form-messages').html('<p style="color: green; font-weight: bold;">Thank you! Your message has been sent.</p>');
+                    $('#form')[0].reset();
+                } else {
+                    $('#form-messages').html('<p style="color: red; font-weight: bold;">Oops! Something went wrong. Please try again.</p>');
+                }
+            },
+            error: function() {
+                $('#form-messages').html('<p style="color: red; font-weight: bold;">An error occurred while sending your message. Please try again later.</p>');
+            }
+        });
+    });
 });
