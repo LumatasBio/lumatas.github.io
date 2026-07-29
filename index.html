@@ -55,7 +55,7 @@
 										</p>
 
 									</div>
-									<span class="image"><img src="images/cells.jpg"></span>
+									<span class="image"><img src="images/MXR039.jpg"></span>
 								</div>
 								</div>
 
@@ -82,25 +82,7 @@
 										<h1>Titan S</h1>
 										<p>Titan S is the new, more mobile rendition of the Titan. Revised for 2018, it packs the same exceptional reliablilty, consistency, and functionality into a smaller, more compact machine.</p>
 									</li>
-									<!--
-									<li>
-										<span class="icon major style5 fa-diamond"></span>
-										<h3>Specifications</h3>
-										<p>Slide Capacity: 72<br>
-										Reagent Capacity: up to 70<br>
-										Heating Capacity: RT to 103&deg;C<br>
-										Power: 220-240VAC<br>
-										Weight: 400kg/880lbs</p>
-									</li>
-									-->
 								</ul>
-								<!-- 
-								<footer class="major">
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn More</a></li>
-									</ul>
-								</footer>
-								-->
 								</div>
 							</section>
 
@@ -119,7 +101,7 @@
 										Reagent Capacity<strong>up to 70</strong>
 									</li>
 									<li class="style3">
-										Heating Capacity<strong>0&deg;C to 103&deg;C</strong>
+										Heating Capacity<strong>0&deg;C to 102&deg;C</strong>
 									</li>
 									<li class="style4">
 										
@@ -139,7 +121,7 @@
 										Reagent Capacity<strong>up to 42</strong>
 									</li>
 									<li class="style3">
-										Heating Capacity<strong>0&deg;C to 103&deg;C</strong>
+										Heating Capacity<strong>0&deg;C to 102&deg;C</strong>
 									</li>
 									<li class="style4">
 										
@@ -149,20 +131,8 @@
 										Weight<strong>250kg/550lbs</strong>
 									</li>
 								</ul>
-								
-								<!-- 
-								<footer class="major">
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn More</a></li>
-									</ul>
-								</footer>
-								-->
 							</div>
 							</section>
-
-
-
-	
 
 						</section>	
 						<!-- Contact Us -->
@@ -172,21 +142,21 @@
 									<h2>Contact Us</h2>
 									<section>
 										<div id="form-messages"></div>
-										<form id = "form"> <!-- assets/mail.php -->
+										<form id="form" action="assets/mail.php" method="POST">
 											<div class="field half first">
-												<input type="text" name="name" id="name" placeholder="Name" />
+												<input type="text" name="name" id="name" placeholder="Name" required />
 											</div>
 											<br>
 											<div class="field half">
-												<input type="email" name="email" id="email" placeholder="Email" />
+												<input type="email" name="email" id="email" placeholder="Email" required />
 											</div>
 											<br>
 											<div class="field">
-												<textarea name="message" id="message" placeholder="Message"></textarea>
+												<textarea name="message" id="message" placeholder="Message" required></textarea>
 											</div>
 											<br>
 											<ul class="actions">
-												<center><li><input id="submit" type="button" name="Submit" value="Submit"/></li></center>
+												<center><li><input id="submit" type="submit" value="Submit"/></li></center>
 											</ul>
 											<br>
 										</form>
@@ -197,8 +167,6 @@
 							</section>
 
 					</div>
-
-
 
 			</div>
 
@@ -212,8 +180,6 @@
 						</ul>
 					</div>
 				</footer>
-		<!-- BG -->
-			<!-- <div id="bg"></div> -->
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
